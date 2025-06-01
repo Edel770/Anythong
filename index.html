@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Object Data Structure and Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .output {
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lesson 5: Object and Array Example</h1>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        // Object example
+        const student = {
+            name: "Alex",
+            age: 21,
+            course: "Computer Science"
+        };
+
+        // Array example
+        let languages = ["JavaScript", "Python", "C++", "Java"];
+
+        // Prepare output text
+        let result = "<h2>Object Values:</h2>";
+        result += "Name: " + student.name + "<br>";
+        result += "Age: " + student["age"] + "<br>";
+        result += "Course: " + student.course + "<br>";
+
+        result += "<h2>Array Values:</h2>";
+        result += "Index 0: " + languages[0] + "<br>";
+        result += "Index 1: " + languages[1] + "<br>";
+
+        result += "<h2>Array Joined:</h2>";
+        result += languages.join(", ") + "<br>";
+
+        let removed = languages.pop();
+        result += "<h2>After pop():</h2>";
+        result += "Removed: " + removed + "<br>";
+        result += "Remaining: " + languages.join(", ") + "<br>";
+
+        // Display on the page
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+
+</html>
